@@ -1,4 +1,5 @@
 :root {
+  --clr-accent-200: #f44f4f;
   --clr-accent-300: #f3393a;
   --clr-accent-400: #ff4141;
   --clr-accent-500: #ae1a49;
@@ -21,6 +22,7 @@
 
   --clr-bg-button: var(--clr-primary-400);
   --clr-bg-button-inverted: var(--clr-accent-300);
+  --clr-bg-button-inverted-hover: var(--clr-accent-200);
 
   --ff-primary: "Roboto", sans-serif;
 
@@ -153,6 +155,10 @@ body {
   background-color: var(--clr-primary-300);
 }
 
+.button[data-type="inverted"]:hover {
+  background-color: var(--clr-bg-button-inverted-hover);
+}
+
 /* navigation */
 
 .primary-header {
@@ -257,15 +263,76 @@ body {
   color: var(--clr-accent-300);
 }
 
-/* carousel section */
+/* product section */
 
 .product-heading {
   text-align: center;
 }
-.product-carousel {
-  background-color: var(--clr-neutral-100);
-  height: 500px;
+
+.product-grid {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: dense;
+  padding: 0.5rem 2rem;
 }
+
+.product-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: box-shadow 0.3s;
+}
+
+.product-card:first-child {
+  grid-row: span 2 / span 2;
+}
+
+.product-card img {
+  height: 200px;
+  width: auto;
+}
+
+.product-card:first-child img {
+  height: auto;
+}
+
+.product-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.product-card-text {
+  padding-top: 1rem;
+  font-size: var(--fs-650);
+  padding-inline: 2.25rem;
+  text-align: center;
+}
+
+.product-grid-wrapper {
+  position: relative;
+}
+
+.product-left-arrow {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.product-right-arrow {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 .product-question {
   text-align: right;
   display: flex;
@@ -330,6 +397,7 @@ body {
 }
 
 .service-card {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -625,7 +693,7 @@ body {
 }
 
 @media (max-width: 64em) {
-  /* carousel media queries */
+  /* product media queries */
   .product-question {
     justify-content: center;
     text-align: center;
@@ -737,7 +805,7 @@ body {
     padding-inline: 10rem;
   }
 
-  /* carousel media queries */
+  /* product media queries */
   .product-question {
     flex-direction: column;
     line-height: 1.2;
@@ -746,6 +814,15 @@ body {
   .product-question-button {
     margin: 0;
     padding-inline: 6rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .vacumn-card,
+  .stove-card {
+    display: none;
   }
 
   /* order media queries */
@@ -789,12 +866,21 @@ body {
 }
 
 @media (max-width: 48em) {
-  /* carousel media queries */
+  /* product media queries */
   .product-question-heading-primary {
     font-size: var(--fs-650) !important;
   }
   .product-question-heading-secondary {
     font-size: var(--fs-500) !important;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exhaust-card,
+  .dish-washer-card {
+    display: none;
   }
 
   /* order media queries */
@@ -862,7 +948,7 @@ body {
     justify-content: center;
   }
 
-  /* carousel media queries */
+  /* product media queries */
   .product-question-heading-primary {
     font-size: var(--fs-500) !important;
   }
