@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header class="primary-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href=""><img src="/images/website-logo.svg" alt="Logo" /></a>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+          <img class="icon-hamburger" src="images/icons/icon-hamburger.svg" alt="" aria-hidden="true" />
+          <img class="icon-close" src="images/icons/icon-close.svg" alt="" aria-hidden="true" />
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <nav class="primary-navigation text-nav" id="primary-navigation">
+          <div class="nav-list-wrapper">
+            <ul class="nav-list" role="list">
+              <li>
+                <a href="">
+                  <img src="/images/logos/location.svg" alt="location icon" />
+                  <span>Ваш город:</span>
+                  <span class="text-secondary-heading">Алматы</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="/images/logos/clock.svg" alt="clock icon" />
+                  <div>
+                    <p>Время работы:</p>
+                    <p class="fw-black">с 9:30 до 18:00 Пн-Пт</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="" class="nav-phone">
+                  <img src="/images/logos/phone.svg" alt="clock icon" />
+                  <div class="nav-phone-text">
+                    <p>+7(863) 203 60 48</p>
+                    <p>+7(863) 203 70 33</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">Заказать звонок</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <button class="button | display-sm-none display-md-inline-flex">Заказать звонок</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero | padding-block-900 bg-light-gray">
+      <div class="background-shape">
+        <!-- <img src="/images/plumber-one-background.png" alt="" /> -->
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-card">
+            <h1 class="text-netural-900 fs-primary-heading fw-black">
+              Сервисный центер<br />
+              <big class="text-primary-heading">INDESIT</big>
+              в Алматы
+            </h1>
+            <h3>Обходитесь без лишних затрат</h3>
+            <button class="button">Вызвать мастера</button>
+            <p>
+              <span>*</span> Выезд и диагностика бесплатно при условии
+              ремонта
+            </p>
+          </div>
+          <div class="hero-stats">
+            <p>hero content stats</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel">
+      <div class="container">
+        <h2 class="fs-primary-heading fw-black text-netural-900">
+          Ремонт любых побутовой техники INDESIT
+        </h2>
+        <!-- carousel here -->
+        <div>
+          <div>
+            <p class="fw-black">
+              Не нашли свой продукт в списке, или остались вопросы?
+            </p>
+            <p>Свяжитесь с менеджером по телефону +7 (778) 065-12-46 или</p>
+          </div>
+          <button class="button">Заказать звонок</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="padding-block-900">
+      <div class="container">
+        <div>
+          <h2>Заказать бесплатный выезд мастера за 30 мин!</h2>
+          <p>
+            Выезд мастера и диагностика бесплатно, при условии ремонта, Мы
+            следим за качеством облуживания. К вам приедет мастер с опытом
+            работы не менее пяти лет. У нас быстро, от 30 минут выезд мастера.
+          </p>
+          <button class="button" data-type="inverted">Заказать звонок</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="padding-block-900">
+      <div class="container">
+        <h2>Сервис <big>INDESIT</big> предлагает лучшие цены</h2>
+        <div class="grid-columns even-columns">
+          <div class="service-card">
+            <div>
+              <p class="fw-bold">Ремонт микроволновки</p>
+              <p>Замена слюды, магнетрона, восстановление кнопок и др</p>
+            </div>
+            <p>ОТ 2500 ₸.</p>
+          </div>
+          <div class="service-card">
+            <div>
+              <p class="fw-bold">Ремонт пылесоса</p>
+              <p>
+                Замена или восстановление шланга, схемы управления, двигателя
+                и пр.
+              </p>
+            </div>
+            <p>ОТ 4000 ₸.</p>
+          </div>
+          <div class="service-card">
+            <div>
+              <p class="fw-bold">Ремонт аудиотехники</p>
+              <p>
+                Колонки, домашние кинотеатры, музыкальные центры и др. виды.
+              </p>
+            </div>
+            <p>ОТ 4500 ₸.</p>
+          </div>
+          <div class="service-card">
+            <div>
+              <p class="fw-bold">Ремонт микроволновки</p>
+              <p>Замена слюды, магнетрона, восстановление кнопок и др</p>
+            </div>
+            <p>ОТ 2500 ₸.</p>
+          </div>
+          <div class="service-card">
+            <div>
+              <p class="fw-bold">Ремонт микроволновки</p>
+              <p>Замена слюды, магнетрона, восстановление кнопок и др</p>
+            </div>
+            <p>ОТ 2500 ₸.</p>
+          </div>
+          <div class="service-card">
+            <div>
+              <p class="fw-bold">Выезд мастера</p>
+              <p>В удобное для Вас время. На дом или в офис!</p>
+            </div>
+            <p>БЕСПЛАТНО</p>
+          </div>
+          <div class="service-card">
+            <div>
+              <p class="fw-bold">Диагностика</p>
+              <p>С ипользованием современного оборудования</p>
+            </div>
+            <p>БЕСПЛАТНО</p>
+          </div>
+          <div class="service-card">
+            <div>
+              <p class="fw-bold">Расширенная гарантия</p>
+              <p>На все запчасти и выполненные услуги</p>
+            </div>
+            <p>БЕСПЛАТНО</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="padding-block-900">
+      <div class="container">
+        <h2>Схема работы</h2>
+        <div class="grid-columns odd-columns">
+          <div class="productivity-card">
+            <img src="" alt="" />
+            <div>
+              <p class="fw-black">Консультация</p>
+              <p>
+                Персональный менеджер ответит на все ваши вопросы и будет
+                держать вас в курсе всех этапов работ
+              </p>
+            </div>
+          </div>
+          <div class="productivity-card">
+            <img src="" alt="" />
+            <div>
+              <p class="fw-black">Доставка</p>
+              <p>
+                Курьер приедет в течении 1 часа или мы можем принять
+                устройство в сервисе
+              </p>
+            </div>
+          </div>
+          <div class="productivity-card">
+            <img src="" alt="" />
+            <div>
+              <p class="fw-black">Диагностика</p>
+              <p>
+                Осуществим диагностику за счет компании, даже если вы
+                откажетесь от ремонтае
+              </p>
+            </div>
+          </div>
+          <div class="productivity-card">
+            <img src="" alt="" />
+            <div>
+              <p class="fw-black">Согласование</p>
+              <p>
+                Персональный менеджер согласует с вами сроки и стоимость
+                ремонта
+              </p>
+            </div>
+          </div>
+          <div class="productivity-card">
+            <img src="" alt="" />
+            <div>
+              <p class="fw-black">Выдача</p>
+              <p>
+                Бесплатно доставим устройство к вам домой или вы можете
+                забрать его сами
+              </p>
+            </div>
+          </div>
+          <div class="productivity-card">
+            <img src="" alt="" />
+            <div>
+              <p class="fw-black">Диагностика</p>
+              <p>
+                Оплата производится после ремонта и проверки устройства
+                клиентом
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="padding-block-900">
+      <div class="container">
+        <div>
+          <h2>Получите скидку 15% прямо сейчас!</h2>
+          <p>
+            Вы выбираете LG, а мы в знак благодарности дарим Вам скидку 15% на
+            все виды ремонтных работ в нашем центре!
+          </p>
+          <button class="button" data-type="inverted">
+            Получить скидку 15%
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="padding-block-900">
+      <div class="container">
+        <h2>Отзывы</h2>
+        <div class="grid-columns odd-columns">
+          <div class="testimonial-card">
+            <img src="" alt="" />
+            <p class="fw-black">Константин</p>
+            <p>
+              С сайтом и сервисом этой компании всё просто отлично! Качество
+              товара соответствует заявленному. Буду и впреть пользоваться
+              товарами с этого сайта, и смело могу рекомендовать его людям.
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <img src="" alt="" />
+            <p class="fw-black">Алина</p>
+            <p>
+              Хочу выразить благодарность компании за качественно выполненную
+              работу по ремонту стиральной машины! Все было качественно и
+              оперативно: от принятия заявки диспетчером до работы мастера!
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <img src="" alt="" />
+            <p class="fw-black">Дмитрий</p>
+            <p>
+              Благодарны за качественное и профессиональное обслуживание,
+              быстро откликнулись. Мастер Сергей приехал в назначенное время,
+              сделал все хорошо
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
