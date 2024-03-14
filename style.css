@@ -314,7 +314,7 @@ body {
   .primary-navigation {
     display: none;
 
-    position: fixed;
+    position: absolute;
     padding: var(--size-500);
     inset: 6rem var(--size-400) auto;
     background: var(--clr-neutral-0);
@@ -325,7 +325,7 @@ body {
 
   .primary-header[data-overlay]::before {
     content: "";
-    position: fixed;
+    position: absolute;
     inset: 0;
     background-image: linear-gradient(rgb(0 0 0 / 0.2), rgb(0 0 0 / 0.9));
   }
@@ -366,7 +366,7 @@ body {
 
   .mobile-nav-toggle {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 2.25rem;
     right: var(--size-400);
     cursor: pointer;

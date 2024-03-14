@@ -9,4 +9,7 @@ navToggle.addEventListener("click", (e) => {
 
   primaryNav.toggleAttribute("data-visible");
   primaryHeader.toggleAttribute("data-overlay");
+
+  document.body.style.overflow =
+    document.body.style.overflow == "hidden" ? "auto" : "hidden";
 });
