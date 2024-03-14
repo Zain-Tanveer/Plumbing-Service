@@ -28,6 +28,7 @@
   --ff-heading: var(--ff-primary);
 
   --fw-regular: 400;
+  --fw-medium: 500;
   --fw-black: 900;
 
   --fs-200: 0.75rem; /* 12px */
@@ -309,6 +310,95 @@ body {
   right: -0.5rem;
 }
 
+/* services section */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: max-content;
+  grid-gap: 1rem;
+  text-align: left;
+}
+
+.service-container {
+  text-align: center;
+}
+.service-heading {
+  padding-bottom: var(--size-500);
+}
+.service-heading big {
+  color: var(--clr-accent-400);
+}
+
+.service-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 13rem;
+  padding: 2rem;
+  line-height: 2;
+  background-color: var(--clr-neutral-0);
+}
+
+.image-service {
+  color: var(--clr-neutral-0);
+  position: relative;
+  padding-right: 8rem;
+}
+
+.plumber-service {
+  background-color: #ff0000;
+}
+.machine-service {
+  background-image: url("images/services/machine-background.png");
+}
+.security-service {
+  background-color: #260a3d;
+}
+
+.service-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.plumber-service::before {
+  content: "";
+  background-image: url("images/services/plumber-background.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+
+.security-service::before {
+  content: "";
+  background-image: url("images/services/security-background.png");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+
+.image-service .text-primary {
+  color: var(--clr-neutral-0);
+  position: relative;
+}
+.image-service .text-secondary {
+  color: #ffffffbd;
+  position: relative;
+}
+.image-service .text-price {
+  color: var(--clr-neutral-0);
+  font-weight: var(--fw-black);
+  position: relative;
+}
+
 @media (max-width: 75em) {
   /* Hero media queries */
   .hero {
@@ -341,6 +431,11 @@ body {
   .order p {
     text-shadow: 0px 1px 1px #0000009e;
     color: #d6d6d6;
+  }
+
+  /* service media queries */
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -502,6 +597,11 @@ body {
   .order-section {
     padding-block: 4rem !important;
   }
+
+  /* service media queries */
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 52em) {
@@ -590,6 +690,11 @@ body {
     box-shadow: none;
     margin-inline: 0;
   }
+
+  /* service media queries */
+  .service-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /* Utility Classes */
@@ -642,6 +747,9 @@ body {
 
 .fw-regular {
   font-weight: var(--fw-regular);
+}
+.fw-medium {
+  font-weight: var(--fw-medium);
 }
 .fw-black {
   font-weight: var(--fw-black);
