@@ -399,6 +399,62 @@ body {
   position: relative;
 }
 
+/* Scheme work section */
+.scheme-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: max-content;
+  grid-gap: 1rem;
+  grid-row-gap: 6.5rem;
+  text-align: left;
+}
+
+.scheme-work-heading {
+  padding-bottom: var(--size-800);
+  color: var(--clr-neutral-500);
+}
+
+.scheme-work-card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 17.5rem;
+  padding: 2rem;
+  line-height: 2;
+  background-color: var(--clr-neutral-0);
+  border: solid 1px var(--clr-primary-300);
+}
+
+.scheme-work-numbering {
+  width: 7rem;
+  height: 6.3rem;
+  padding: 0.5rem;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-700);
+  color: var(--clr-neutral-0);
+  background-color: var(--clr-primary-300);
+  position: absolute;
+  top: -60px;
+  left: -8px;
+}
+
+.scheme-work-card img {
+  height: 3.4rem;
+  width: auto;
+  margin-right: 1.5rem;
+}
+
+.scheme-work-card-text {
+  align-self: flex-start;
+  padding-top: 2.25rem;
+  line-height: 2;
+}
+
+.scheme-work-card-text-secondary {
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-400);
+}
+
 @media (max-width: 75em) {
   /* Hero media queries */
   .hero {
@@ -485,6 +541,16 @@ body {
   .product-question {
     justify-content: center;
     text-align: center;
+  }
+
+  /* scheme work media queries */
+  .scheme-work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .scheme-work-numbering {
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 }
 
@@ -632,6 +698,16 @@ body {
   }
 }
 
+@media (max-width: 43em) {
+  /* scheme work media queries */
+  .scheme-work-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .scheme-work-card-text {
+    padding-top: 3rem;
+  }
+}
+
 @media (max-width: 34em) {
   /* Hero media queries */
   .hero-button {
@@ -694,6 +770,17 @@ body {
   /* service media queries */
   .service-grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* scheme work media queries */
+  .scheme-work-card-text {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 26em) {
+  .scheme-work-card-text {
+    padding-top: 2.25rem;
   }
 }
 
@@ -836,6 +923,10 @@ body {
 
 .display-sm-none {
   display: none;
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media (min-width: 60em) {
