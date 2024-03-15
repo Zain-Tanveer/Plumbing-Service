@@ -66,15 +66,6 @@
   --size-900: 6rem;
 }
 
-/* @media (min-width: 50em) {
-  :root {
-    --fs-body: var(--fs-500);
-    --fs-primary-heading: var(--fs-900);
-    --fs-secondary-heading: var(--fs-800);
-    --fs-nav: var(--fs-300);
-  }
-} */
-
 /* Box sizing rules */
 *,
 *::before,
@@ -199,7 +190,12 @@ body {
 
 .hero {
   position: relative;
-  padding-block: var(--size-900);
+  padding-block: 4rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-stats {
@@ -215,7 +211,7 @@ body {
   border-right: solid 1px #eeeeee;
 }
 
-.stats-number {
+.stats-number p {
   color: var(--clr-primary-400);
   font-size: 4.5rem;
 }
@@ -227,7 +223,7 @@ body {
   border: none;
 }
 
-.background-shape {
+.hero-background-image {
   display: flex;
   justify-content: flex-end;
   position: absolute;
@@ -235,14 +231,14 @@ body {
   top: 0;
   right: 0;
   height: 100%;
-  width: 52vw;
+  z-index: 1;
 }
 
-.background-shape img {
+.hero-background-image img {
   height: auto;
   width: 100%;
-
-  padding: 1rem;
+  padding: 2.5rem;
+  padding-right: 0.5rem;
 }
 
 .hero-sub-heading {
@@ -738,14 +734,19 @@ body {
   display: none;
 }
 
-@media (max-width: 75em) {
+@media (max-width: 91em) {
+  /* Hero media queries */
+  .stats-item {
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 84em) {
   /* Hero media queries */
   .hero {
     padding-block: var(--size-600);
   }
-  .background-shape {
-    width: 55vw;
-  }
+
   .hero-stats {
     margin-top: 2rem;
   }
@@ -758,10 +759,9 @@ body {
   .stats-item {
     padding-inline: 1.5rem;
   }
-  .stats-number {
-    font-size: 3rem;
-  }
+}
 
+@media (max-width: 75em) {
   /* order media queries */
   .order h2 {
     text-shadow: 2px 1px 2px #000000a6;
@@ -778,6 +778,23 @@ body {
   }
 }
 
+@media (min-width: 60em) and (max-width: 72em) {
+  /* hero media queries */
+  .stats-number p {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 60em) and (max-width: 66em) {
+  /* hero media queries */
+  .stats-item {
+    padding-inline: 1rem;
+  }
+  .stats-text {
+    font-size: var(--fs-400) !important;
+  }
+}
+
 @media (max-width: 70em) {
   .discount-text {
     padding-right: 40rem !important;
@@ -786,9 +803,7 @@ body {
 
 @media (max-width: 68.75em) {
   /* Hero media queries */
-  .background-shape {
-    width: 51vw;
-  }
+
   .hero-note {
     font-size: var(--fs-400);
   }
@@ -931,7 +946,7 @@ body {
   .hero-card {
     text-align: center;
   }
-  .background-shape {
+  .hero-background-image {
     display: none;
   }
   .hero-button {
