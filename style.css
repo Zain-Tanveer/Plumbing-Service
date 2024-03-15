@@ -191,6 +191,7 @@ body {
 .hero {
   position: relative;
   padding-block: 4rem;
+  margin-bottom: 3rem;
 }
 
 .hero-content {
@@ -1217,6 +1218,130 @@ body {
   /* location media queries */
   .location-clock {
     margin-left: 0;
+  }
+}
+
+/* Background Icons CSS */
+
+/* product background section */
+.product-section {
+  position: relative;
+}
+
+.product-zig-zag {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product-round-blue {
+  position: absolute;
+  left: -8vw;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.product-round-white {
+  position: absolute;
+  right: 2vw;
+  bottom: 14rem;
+}
+
+/* order background section */
+.order-section {
+  position: relative;
+}
+
+.order-round-dashed {
+  position: absolute;
+  z-index: -1;
+  top: 2.5rem;
+  left: 5.5rem;
+}
+
+.order-zig-zag-left {
+  position: absolute;
+  z-index: -1;
+  top: 3rem;
+  left: 9rem;
+  transform: rotate(60deg);
+  width: 12rem;
+}
+
+.order-zig-zag-right {
+  position: absolute;
+  z-index: -1;
+  top: 1rem;
+  right: 8.5rem;
+  transform: rotate(90deg);
+}
+
+.order-container {
+  z-index: 1;
+}
+
+@media (max-width: 89em) {
+  /* order background media queries */
+  .order-round-dashed {
+    left: 2rem;
+  }
+  .order-zig-zag-left {
+    left: 5rem;
+  }
+}
+
+@media (max-width: 86em) {
+  /* product background media queries */
+  .product-round-white {
+    display: none;
+  }
+  .product-round-blue {
+    display: none;
+  }
+}
+
+@media (max-width: 83.75em) {
+  /* order background media queries */
+  .order-round-dashed {
+    left: 1rem;
+  }
+  .order-zig-zag-left {
+    left: 3.5rem;
+  }
+}
+
+@media (max-width: 75em) {
+  /* order background media queries */
+  .order-round-dashed {
+    left: 0.35rem;
+  }
+}
+
+@media (max-width: 69em) {
+  /* order background media queries */
+  .order-zig-zag-left {
+    transform: rotate(10deg);
+    top: 3.5rem;
+    width: 10rem;
+    left: 6.25rem;
+    right: 0;
+    margin: auto;
+  }
+  .order-zig-zag-right {
+    display: none;
+  }
+}
+
+@media (max-width: 60em) {
+  /* product background media queries */
+  .product-zig-zag {
+    display: none;
+  }
+
+  /* order background media queries */
+  .order-zig-zag-left {
+    top: 1.5rem;
   }
 }
 
