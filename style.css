@@ -607,6 +607,38 @@ body {
   padding: 0.75rem;
 }
 
+/* location section */
+.location-section {
+  background-image: url("/images/google-maps-image.png");
+  background-position: 50% 50%;
+}
+
+.location-card {
+  background-color: var(--clr-neutral-0);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 3rem;
+  padding-right: 10rem;
+  width: fit-content;
+}
+
+.location-card-content {
+  display: flex;
+  line-height: 2.25;
+  gap: 0.5rem;
+}
+
+.location-card h1 {
+  color: var(--clr-neutral-500);
+}
+
+.location-card a {
+  color: var(--clr-neutral-200);
+  text-decoration: none;
+}
+
 /* footer */
 
 .footer {
@@ -955,6 +987,29 @@ body {
   .scheme-work-card-text {
     padding-top: 3rem;
   }
+
+  /* location media queries */
+  .location-section-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .location-section {
+    background-position: initial;
+  }
+
+  .location-card {
+    width: 80vw;
+    padding-right: 3rem;
+    align-items: center;
+  }
+
+  .location-clock {
+    margin-left: 1rem;
+  }
+  .location-phone {
+    margin-left: -0.5rem;
+  }
 }
 
 @media (max-width: 40em) {
@@ -1074,6 +1129,13 @@ body {
   /* footer media queries */
   .footer p {
     font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 22em) {
+  /* location media queries */
+  .location-clock {
+    margin-left: 0;
   }
 }
 
