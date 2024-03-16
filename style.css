@@ -605,6 +605,10 @@ body {
 }
 
 /* question answers section */
+.question-answers-section {
+  margin-bottom: 6rem;
+}
+
 .question-answers-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -666,9 +670,26 @@ body {
 }
 
 /* location section */
+
 .location-section {
-  background-image: url("/images/google-maps-image.png");
-  background-position: 50% 50%;
+  position: relative;
+}
+
+.location-map {
+  width: 100%;
+  border: none;
+  height: 40rem;
+}
+
+.location-section-container {
+  height: fit-content;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-left: 10vw;
+  z-index: 1;
 }
 
 .location-card {
@@ -776,6 +797,11 @@ body {
   /* service media queries */
   .service-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* location media queries */
+  .location-section-container {
+    margin-left: 1rem;
   }
 }
 
@@ -1072,12 +1098,7 @@ body {
 
   /* location media queries */
   .location-section-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .location-section {
-    background-position: initial;
+    left: 7%;
   }
 
   .location-card {
@@ -1215,6 +1236,11 @@ body {
 }
 
 @media (max-width: 22em) {
+  /* hero media queries */
+  .stats-number p {
+    font-size: 2.5rem;
+  }
+
   /* location media queries */
   .location-clock {
     margin-left: 0;
@@ -1334,6 +1360,11 @@ body {
 }
 
 @media (max-width: 60em) {
+  /* hero media queries */
+  .hero-content {
+    position: initial;
+  }
+
   /* product background media queries */
   .product-zig-zag {
     display: none;
