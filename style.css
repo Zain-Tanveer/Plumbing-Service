@@ -94,6 +94,7 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
@@ -891,6 +892,10 @@ body {
 
 @media (max-width: 60em) {
   /* Navigation media queries */
+  .nav-wrapper {
+    position: relative;
+  }
+
   .nav-list {
     display: inline;
     gap: 0;
@@ -953,7 +958,6 @@ body {
   .mobile-nav-toggle {
     display: block;
     position: absolute;
-    top: 2.25rem;
     right: var(--size-400);
     cursor: pointer;
     background: transparent;
@@ -1464,6 +1468,7 @@ body {
   left: 0;
   right: 22rem;
   bottom: -4rem;
+  transform: rotate(75deg);
   margin: auto;
 }
 
@@ -1476,7 +1481,79 @@ body {
 .discount-round-dashed-top {
   top: -4rem;
   right: 0.75%;
+  transform: rotate(75deg);
   width: 8rem;
+}
+
+/* question answers background section */
+.question-answers-section {
+  position: relative;
+}
+
+.question-answers-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.qa-round-white-lg-top {
+  top: -1.5rem;
+  left: 4%;
+}
+
+.qa-zig-zag-left {
+  width: 9rem;
+  top: 2rem;
+  bottom: 0rem;
+  left: 6%;
+  margin: auto;
+  z-index: 0;
+  transform: rotate(90deg);
+}
+
+.qa-round-blue-left {
+  bottom: -4.25rem;
+  left: -3%;
+  z-index: 3;
+}
+
+.qa-zig-zag-bottom {
+  width: 6rem;
+  bottom: -3rem;
+  left: 0;
+  right: 50%;
+  margin: auto;
+  transform: rotate(180deg);
+  z-index: 3;
+}
+
+.qa-round-white-lg-bottom {
+  bottom: -1.5rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.qa-round-dashed-left {
+  width: 4rem;
+  right: 0;
+  left: 0;
+  top: -2rem;
+  margin: auto;
+  transform: rotate(120deg);
+  z-index: 4;
+}
+
+.qa-round-dashed-right {
+  width: 8rem;
+  right: 2%;
+  bottom: -4rem;
+  transform: rotate(75deg);
+  z-index: 4;
+}
+
+.qa-zig-zag-right {
+  top: -5rem;
+  right: 18%;
 }
 
 @media (max-width: 89em) {
@@ -1519,6 +1596,11 @@ body {
 
   .service-round-white-bottom {
     right: 0;
+  }
+
+  /* question answers background media queries */
+  .qa-round-blue-left {
+    left: 0;
   }
 }
 
@@ -1612,6 +1694,13 @@ body {
   .discount-round-dashed-top {
     z-index: 3;
   }
+
+  /* question answers background media queries */
+  .qa-zig-zag-right {
+    width: 8rem;
+    top: -4rem;
+    right: 10%;
+  }
 }
 
 @media (max-width: 48em) {
@@ -1641,6 +1730,12 @@ body {
     width: 7rem;
     bottom: -3.5rem;
   }
+
+  /* question answers background media queries  */
+  .qa-round-dashed-right {
+    width: 6rem;
+    bottom: -3rem;
+  }
 }
 
 @media (max-width: 35em) {
@@ -1650,6 +1745,17 @@ body {
   }
   .service-round-white-bottom {
     display: none;
+  }
+
+  /* question answers background media queries  */
+  .qa-zig-zag-bottom {
+    display: none;
+  }
+
+  .qa-zig-zag-right {
+    width: 7rem;
+    top: -3.5rem;
+    right: 4%;
   }
 }
 
