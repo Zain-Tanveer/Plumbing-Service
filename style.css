@@ -293,7 +293,7 @@ body {
 }
 
 .product-card img {
-  height: 200px;
+  height: 12.5rem;
   width: auto;
 }
 
@@ -438,10 +438,10 @@ body {
   background-image: url("images/services/plumber-background.png");
   background-size: cover;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   opacity: 0.5;
 }
 
@@ -450,10 +450,10 @@ body {
   background-image: url("images/services/security-background.png");
   background-size: cover;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   opacity: 0.5;
 }
 
@@ -506,8 +506,8 @@ body {
   color: var(--clr-neutral-0);
   background-color: var(--clr-primary-300);
   position: absolute;
-  top: -60px;
-  left: -8px;
+  top: -3.75rem;
+  left: -0.5rem;
 }
 
 .scheme-work-card img {
